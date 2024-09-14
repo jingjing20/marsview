@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { FormProps } from 'antd';
-import { Button, Flex, Form, Input, InputNumber, Space } from 'antd';
+import { Button, Flex, Form, Input, InputNumber } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { login, sendEmail, regist } from '@/api/user';
 import storage from '@/utils/storage';
@@ -87,8 +87,7 @@ export default function Login() {
         <div className={style.form}>
           {type === 'login' ? (
             <div className={style.title}>
-              <img src="/imgs/mars-logo.png" width={45} />
-              <span>Marsview</span>
+              <img src="/imgs/logo.png" width={150} />
             </div>
           ) : (
             <div className={style.title}>邮箱注册</div>
@@ -118,7 +117,7 @@ export default function Login() {
             )}
 
             <Form.Item<FieldType> style={{ marginTop: 32 }} name="userPwd" rules={[{ required: true, message: '请输入密码' }]}>
-              <Input.Password prefix={<LockOutlined />} autoComplete="off" allowClear />
+              <Input.Password prefix={<LockOutlined />} autoComplete="off" allowClear placeholder="请输入密码" />
             </Form.Item>
 
             <Form.Item style={{ marginTop: 40 }}>

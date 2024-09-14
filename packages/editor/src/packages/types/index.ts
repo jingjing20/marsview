@@ -145,7 +145,7 @@ export interface MessageAction {
 /**
  * 通知行为
  */
-export interface NotifacationAction {
+export interface NotificationAction {
   type: 'info' | 'success' | 'error' | 'warning'; // 行为类型
   message: string;
   description: string;
@@ -175,8 +175,8 @@ export interface JumpLinkAction {
  */
 
 export interface VariableAction {
-  assigmentType: 'assigment' | 'reset';
-  assigmentWay: 'static' | 'dynamic';
+  assignmentType: 'assignment' | 'reset';
+  assignmentWay: 'static' | 'dynamic';
   name: string;
   value: any;
 }

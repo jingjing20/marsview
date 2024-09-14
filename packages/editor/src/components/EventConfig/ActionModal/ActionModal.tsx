@@ -8,14 +8,14 @@ import FormAction from './FormAction';
 // 弹框
 import OpenModalAction from './OpenModalAction';
 import MessageAction from './MessageAction';
-import NotifacationAction from './NotifacationAction';
+import NotificationAction from './NotificationAction';
 import ShowConfirmAction from './ShowConfirmAction';
 import RequestAction from './RequestAction';
 // 组件
 import VisibleAction from './VisibleAction';
 import DisableAction from './DisableAction';
 import ComponentMethods from './ComponentMethods';
-import VariableAssigment from './VariableAssigment';
+import VariableAssignment from './VariableAssignment';
 // 飞书
 import SendMessageAction from './SendMessageAction';
 import CreateNodeAction from './CreateNodeAction';
@@ -126,9 +126,9 @@ const ActionModal = (props: any, ref: any) => {
         },
         {
           label: '消息通知',
-          key: 'notifacation',
+          key: 'notification',
           render: () => {
-            return <NotifacationAction />;
+            return <NotificationAction />;
           },
         },
       ],
@@ -176,7 +176,7 @@ const ActionModal = (props: any, ref: any) => {
           label: '变量赋值',
           key: 'variable',
           render: () => {
-            return <VariableAssigment form={form} />;
+            return <VariableAssignment form={form} />;
           },
         },
       ],
@@ -241,7 +241,7 @@ const ActionModal = (props: any, ref: any) => {
       await form.validateFields();
       const values = form.getFieldsValue();
       // 变量赋值需要进行数据转换
-      if (values.assigmentType === 'assigment' && values.assigmentWay === 'static') {
+      if (values.assignmentType === 'assignment' && values.assignmentWay === 'static') {
         if (values.variableType === 'array' || values.variableType === 'object') {
           try {
             values.value = typeof values.value === 'string' ? JSON.parse(values.value || '') : values.value || '';
@@ -265,7 +265,7 @@ const ActionModal = (props: any, ref: any) => {
   const handleClick = (item: any) => {
     form.resetFields();
     if (item.key === 'variable') {
-      form.setFieldsValue({ assigmentType: 'assigment', assigmentWay: 'static' });
+      form.setFieldsValue({ assignmentType: 'assignment', assignmentWay: 'static' });
     } else if (item.key === 'showConfirm') {
       form.setFieldsValue({
         type: 'confirm',
@@ -280,7 +280,7 @@ const ActionModal = (props: any, ref: any) => {
         content: '操作成功',
         duration: 3,
       });
-    } else if (item.key === 'notifacation') {
+    } else if (item.key === 'notification') {
       form.setFieldsValue({
         type: 'info',
         message: '通知',
@@ -313,7 +313,7 @@ const ActionModal = (props: any, ref: any) => {
       form.setFieldsValue({
         scripts: `/**
 * 触发动作后，会执行该函数
-* 上下文: context        
+* 上下文: context
 * 变量: variable
 * 事件流参数: eventParams
 */

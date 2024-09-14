@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
 import { setNebulaCanvas } from '@/utils/canvas';
+import CountUp from 'react-countup';
 import style from './index.module.less';
 export default function Welcome() {
   const [isShadow, setShadow] = useState(false);
@@ -33,8 +34,7 @@ export default function Welcome() {
         }}
       >
         <div className={style.logo}>
-          <img src="/imgs/mars-logo.png" width="40" />
-          <span>Marsview</span>
+          <img src="/imgs/logo.png" width="150" />
         </div>
         <div className={style.doc}>
           <a href="http://docs.marsview.cc" target="_blank">
@@ -49,7 +49,7 @@ export default function Welcome() {
                 p-id="4251"
               ></path>
             </svg>
-            <span>Github</span>
+            <span>GitHub</span>
           </a>
         </div>
       </section>
@@ -58,6 +58,10 @@ export default function Welcome() {
         <div className={style.content}>
           <h1 className={style.title}>Marsview 低代码搭建平台</h1>
           <p className={style.desc}>让搭建更简单，让开发更高效</p>
+          <div className={style.count}>
+            服务 <CountUp end={1000} duration={3} />+ 项目，
+            <CountUp end={1000} duration={3} />+ 页面
+          </div>
           <div className={style.btnGroup}>
             <Button type="primary" ghost size="large" onClick={openDoc}>
               产品文档
@@ -118,7 +122,7 @@ export default function Welcome() {
         </div>
       </section>
       <section className={style.footer}>
-        <img src="/imgs/mars-logo-light.png" />
+        <img src="/imgs/logo.png" />
         <h1>欢迎使用 Marsview 零代码搭建平台</h1>
         <Link to="/projects">
           <Button type="primary" size="large">

@@ -107,7 +107,7 @@ const ColumnSetting = memo((props: IModalProp) => {
       values.list?.map((item: any, index: number) => {
         let name = '';
         if (typeof item.text === 'string' || item.text?.type === 'static') {
-          name = '操作列' + (item.text?.value || item.text) + '事件';
+          name = '点击' + (item.text?.value || item.text) + '事件';
         } else {
           name = `操作列动态按钮${index + 1}事件`;
         }
@@ -138,11 +138,11 @@ const ColumnSetting = memo((props: IModalProp) => {
   };
 
   // 关闭
-  const handleCancle = () => {
+  const handleCancel = () => {
     setVisible(false);
   };
   return (
-    <Modal title="列设置" open={visible} onOk={handleOk} onCancel={handleCancle} width={900}>
+    <Modal title="列设置" open={visible} onOk={handleOk} onCancel={handleCancel} width={900}>
       <Form form={form} labelCol={{ span: 6 }}>
         <Tabs items={items} />
       </Form>

@@ -54,8 +54,8 @@ export interface PageState {
       }[];
       timeout: number;
       timeoutErrorMessage: string;
-      requestIntercetpor?: string;
-      responseIntercetpor?: string;
+      requestInterceptor?: string;
+      responseInterceptor?: string;
     };
   };
 }

@@ -6,7 +6,7 @@ import {
   JumpLinkAction,
   MessageAction,
   MethodsAction,
-  NotifacationAction,
+  NotificationAction,
   VariableAction,
 } from '../types';
 import { getComponentRef } from './useComponentRefs';
@@ -165,8 +165,8 @@ const execAction = (node: any, params: any = {}) => {
       handleShowConfirm(node, data);
     } else if (node.action.actionType === 'message') {
       handleMessage(node, data);
-    } else if (node.action.actionType === 'notifacation') {
-      handleNotifacation(node, data);
+    } else if (node.action.actionType === 'notification') {
+      handleNotification(node, data);
     } else if (node.action.actionType === 'request' || node.action.actionType === 'download') {
       handleRequest(node, data);
     } else if (node.action.actionType === 'formReset') {
@@ -327,7 +327,7 @@ const handleMessage = ({ action, next }: ActionNode<MessageAction>, data: any) =
 /**
  * 消息通知
  */
-const handleNotifacation = ({ action, next }: ActionNode<NotifacationAction>, data: any) => {
+const handleNotification = ({ action, next }: ActionNode<NotificationAction>, data: any) => {
   notification.open({
     type: action.type,
     message: action.message,
@@ -377,16 +377,16 @@ const handleJumpLink = async ({ action, next }: ActionNode<JumpLinkAction>, data
  * 变量赋值
  */
 const handleVariable = ({ action, next }: ActionNode<VariableAction>, data: any) => {
-  let value = action.assigmentType === 'reset' ? undefined : data[action.name];
+  let value = action.assignmentType === 'reset' ? undefined : data[action.name];
   /**
    * 1. 变量重置，清空variableData中的数据
    * 2. 变量静态赋值，直接使用定义的value
    * 3. 变量动态赋值，使用上一个行为中返回的数据作为结果赋值
    */
-  if (action.assigmentType === 'reset') {
+  if (action.assignmentType === 'reset') {
     value = undefined;
-  } else if (action.assigmentType === 'assigment') {
-    if (action.assigmentWay === 'static') {
+  } else if (action.assignmentType === 'assignment') {
+    if (action.assignmentWay === 'static') {
       value = action.value;
     } else {
       value = data;

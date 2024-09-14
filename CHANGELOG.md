@@ -2,6 +2,64 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/JackySoft/marsview/compare/v3.1.1...v3.1.2) (2024-09-13)
+
+
+### Documentation
+
+* 修改文档和readme ([0ca52d6](https://github.com/JackySoft/marsview/commit/0ca52d6f03ee8a5ddd10b7024818e9b168ee4c27))
+
+### [3.1.1](https://github.com/JackySoft/marsview/compare/v3.1.0...v3.1.1) (2024-09-13)
+
+
+### Features
+
+* 补充协议 ([23ef4ea](https://github.com/JackySoft/marsview/commit/23ef4ea3e00fa1fcf6d4298044e8b1d8d559cb68))
+
+## [3.1.0](https://github.com/JackySoft/marsview/compare/v3.0.0...v3.1.0) (2024-09-13)
+
+
+### Features
+
+* 优化页面 ([1d30546](https://github.com/JackySoft/marsview/commit/1d305462739317426dd1deec1e30951d98359386))
+
+
+### Bug Fixes
+
+* 修复复制问题 ([8f32a1b](https://github.com/JackySoft/marsview/commit/8f32a1bab628e115126f5fcff481ffe79428dc6b))
+
+## [3.0.0](https://github.com/JackySoft/marsview/compare/v2.30.0...v3.0.0) (2024-09-12)
+
+
+### Features
+
+* 1.开发数值统计组件。 2.开发倒计时组件。3.优化首页。 ([71eee20](https://github.com/JackySoft/marsview/commit/71eee201afb97872327a82e7f7abe412c83ed14e))
+
+
+### Bug Fixes
+
+* 修复单词拼写错误问题 ([62d88a2](https://github.com/JackySoft/marsview/commit/62d88a2eb89312fff2ccc1dbf9580621014cabdf))
+* 修复若干错误单词，删除执行表达式中的无用语句 ([5bad7b6](https://github.com/JackySoft/marsview/commit/5bad7b6ab47c950f43ac9d8ee64537ef779b4519))
+
+
+### Others
+
+* 修改事件文案 ([f9be889](https://github.com/JackySoft/marsview/commit/f9be889ba3400b9141c7ab9adc74530ec48d2d35))
+
+## [2.30.0](https://github.com/JackySoft/marsview/compare/v2.29.0...v2.30.0) (2024-09-10)
+
+
+### Bug Fixes
+
+* 导出反馈组件 ([7d37db8](https://github.com/JackySoft/marsview/commit/7d37db8917648d0e61c899e370652c83777557f5))
+* 修复弹框拖拽问题 ([5a0b25c](https://github.com/JackySoft/marsview/commit/5a0b25c4f8e475f55d50f7c49f5b2112c4055086))
+* 修复code问题 ([76517b1](https://github.com/JackySoft/marsview/commit/76517b1285d372522fc5167884f65174729d6f69))
+
+
+### Others
+
+* 替换群二维码 ([ee24b27](https://github.com/JackySoft/marsview/commit/ee24b27005958cbad03c8a713a32987a6c85727c))
+
 ## [2.29.0](https://github.com/JackySoft/marsview/compare/v2.28.0...v2.29.0) (2024-09-09)
 
 
