@@ -7,6 +7,7 @@ import { CaretDownOutlined } from '@ant-design/icons/lib';
 import MColorPicker from '../ColorPicker';
 import VariableBindInput from '../VariableBind/VariableBind';
 import InputSelect from '../InputSelect/InputSelect';
+import InputPx from '../StyleConfig/InputPx';
 import styles from './index.module.less';
 
 // 如果没有设置label，则独占一行
@@ -35,15 +36,24 @@ const SetterRender = memo(({ attrs, form }: IAttrs) => {
           return (
             <h2 className={styles.title} key={key}>
               <span style={{ marginRight: 10 }}>{item.label}</span>
+              {/* 标题增加提示信息 */}
               {item.tooltip ? (
                 <Tooltip title={item.tooltip}>
                   <QuestionCircleOutlined />
                 </Tooltip>
               ) : null}
+              {/* 标题增加跳转链接 */}
+              {item.link ? (
+                <a href={item.link.url} target="_blank" style={{ fontSize: 12 }}>
+                  {item.link.label}
+                </a>
+              ) : null}
             </h2>
           );
         } else if (item.type == 'Input') {
           FormControl = <Input {...item.props} />;
+        } else if (item.type === 'InputPx') {
+          FormControl = <InputPx {...item.props} />;
         } else if (item.type == 'TextArea') {
           FormControl = <Input.TextArea rows={3} cols={8} {...item.props} />;
         } else if (item.type == 'InputSelect') {
@@ -98,6 +108,13 @@ const SetterRender = memo(({ attrs, form }: IAttrs) => {
           </Form.Item>
         );
       })}
+      {/* 公共属性 */}
+      <h2 className={styles.title} key="visibleTitle">
+        <span style={{ marginRight: 10 }}>组件显隐</span>
+      </h2>
+      <Form.Item key="showOrHide" name="showOrHide" label="显示条件">
+        <VariableBindInput />
+      </Form.Item>
     </>
   );
 });

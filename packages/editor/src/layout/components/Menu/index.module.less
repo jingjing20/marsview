@@ -5,6 +5,7 @@
   border-radius: 5px;
   text-align: center;
   cursor: grab;
+  font-size: 12px;
 }
 
 .menuItemLib {
@@ -17,6 +18,18 @@
   :global {
     .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-tab {
       padding: 8px 5px 8px 17px;
+    }
+  }
+}
+// 组件大纲
+.outlinePanel {
+  padding-right: 24px;
+  height: calc(100vh - 110px);
+  overflow-y: auto;
+  :global {
+    .ant-tree .ant-tree-node-selected {
+      background-color: #9d5cff;
+      color: #fff;
     }
   }
 }

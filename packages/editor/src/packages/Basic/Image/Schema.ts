@@ -16,12 +16,12 @@ export default {
       name: 'src',
     },
     {
-      type: 'Input',
+      type: 'InputPx',
       label: '图片宽度',
       name: 'width',
     },
     {
-      type: 'Input',
+      type: 'InputPx',
       label: '图片高度',
       name: 'height',
     },
@@ -29,11 +29,6 @@ export default {
       type: 'Switch',
       label: '是否预览',
       name: 'preview',
-    },
-    {
-      type: 'Input',
-      label: '图片alt',
-      name: 'alt',
     },
   ],
   config: {

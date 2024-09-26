@@ -1,5 +1,5 @@
 import React, { useState, useImperativeHandle, forwardRef } from 'react';
-import Icon, * as Icons from '@ant-design/icons';
+import * as Icons from '@ant-design/icons';
 import { ComponentType } from '../../types';
 /**
  *
@@ -9,9 +9,8 @@ import { ComponentType } from '../../types';
  */
 const MIcon = (
   {
-    id,
-    type,
     config,
+    onClick,
   }: ComponentType<{
     icon: string;
     style?: React.CSSProperties;
@@ -30,7 +29,19 @@ const MIcon = (
       },
     };
   });
-  const iconComp = Icons[config.props.icon as keyof typeof Icons];
-  return visible && <Icon component={iconComp as React.ForwardRefExoticComponent<any>} style={config.style} {...config.props} />;
+
+  const handleClick = () => {
+    onClick?.();
+  };
+
+  const iconsList: { [key: string]: any } = Icons;
+  return (
+    visible &&
+    React.createElement(iconsList[config.props.icon], {
+      style: config.style,
+      ...config.props,
+      onClick: handleClick,
+    })
+  );
 };
 export default forwardRef(MIcon);

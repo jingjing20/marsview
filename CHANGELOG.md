@@ -2,6 +2,85 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.14.0](https://github.com/JackySoft/marsview/compare/v3.13.0...v3.14.0) (2024-09-25)
+
+
+### Bug Fixes
+
+* 修复icon版本问题 ([1fdcce3](https://github.com/JackySoft/marsview/commit/1fdcce34710834c462720444e6995542cc48f4cc))
+
+## [3.13.0](https://github.com/JackySoft/marsview/compare/v3.12.0...v3.13.0) (2024-09-25)
+
+
+### Features
+
+* 1.替换分割组件。2.增加cdn。3.画布增加缩放和拖拽。4.功能优化。 ([aa3a6b6](https://github.com/JackySoft/marsview/commit/aa3a6b606eb4fc1fe36be660f070414df2272220))
+
+## [3.12.0](https://github.com/JackySoft/marsview/compare/v3.11.0...v3.12.0) (2024-09-24)
+
+
+### Feature Improvements
+
+* 优化代码 ([e9f7c1e](https://github.com/JackySoft/marsview/commit/e9f7c1ed002383afc0163319ababfbcc1c76da80))
+
+## [3.11.0](https://github.com/JackySoft/marsview/compare/v3.10.0...v3.11.0) (2024-09-24)
+
+
+### Features
+
+* 1.优化样式，缩小属性配置字体大小。2.新增精选模板菜单。 ([65efd6a](https://github.com/JackySoft/marsview/commit/65efd6ab089f6a4aa9c59ca762eaeab56224c3fc))
+
+## [3.10.0](https://github.com/JackySoft/marsview/compare/v3.9.0...v3.10.0) (2024-09-23)
+
+
+### Features
+
+* 所有组件添加公共属性显示和隐藏，用于处理显隐逻辑 ([81c3c2e](https://github.com/JackySoft/marsview/commit/81c3c2e79a61a0cdb99393c37dbf4f345e37d39e))
+* 文档添加百度统计功能 ([32b0dc5](https://github.com/JackySoft/marsview/commit/32b0dc57c20747771e68b7efe341069872af1fc7))
+
+## [3.9.0](https://github.com/JackySoft/marsview/compare/v3.8.0...v3.9.0) (2024-09-22)
+
+
+### Bug Fixes
+
+* 修复组件ID复制报错问题 ([c7528a2](https://github.com/JackySoft/marsview/commit/c7528a2446fc2e9c50bd3b818bdccd4325ecd650))
+
+## [3.8.0](https://github.com/JackySoft/marsview/compare/v3.7.0...v3.8.0) (2024-09-22)
+
+
+### Bug Fixes
+
+* admin系统名称字号适配 ([cefcf3c](https://github.com/JackySoft/marsview/commit/cefcf3c19b83f2cd3be6a7e740e10d0398ee31db))
+
+## [3.7.0](https://github.com/JackySoft/marsview/compare/v3.6.0...v3.7.0) (2024-09-22)
+
+
+### Bug Fixes
+
+* 1.修复日期选择问题。2.修复组件复制粘贴问题。3.修复admin页面高度问题。 ([22dcdf6](https://github.com/JackySoft/marsview/commit/22dcdf689b1df1d92651c084683512c3de301ea5))
+
+## [3.6.0](https://github.com/JackySoft/marsview/compare/v3.5.0...v3.6.0) (2024-09-22)
+
+
+### Bug Fixes
+
+* 优化组件大纲 ([fe49a68](https://github.com/JackySoft/marsview/commit/fe49a68e5e364bc5d69aaf50eb863187caf95986))
+
+## [3.5.0](https://github.com/JackySoft/marsview/compare/v3.4.0...v3.5.0) (2024-09-22)
+
+
+### Feature Improvements
+
+* 优化地图组件功能 ([39072c0](https://github.com/JackySoft/marsview/commit/39072c0e4b3fd8310fb2a6c9eb2201cf6b23f043))
+
+## [3.4.0](https://github.com/JackySoft/marsview/compare/v3.3.0...v3.4.0) (2024-09-21)
+
+
+### Features
+
+* 开发地图组件 ([d9a8b72](https://github.com/JackySoft/marsview/commit/d9a8b72c7da6a7b18afa884e45527e1f29cb0480))
+* 添加打包上传脚本 ([c5f5429](https://github.com/JackySoft/marsview/commit/c5f54294f93acc1ba5ce1bc6c56a35b108d8af26))
+
 ## [3.3.0](https://github.com/JackySoft/marsview/compare/v3.2.0...v3.3.0) (2024-09-20)
 
 

@@ -256,6 +256,7 @@ export enum FormType {
   Collapse = 'Collapse',
   Panel = 'Panel',
   Input = 'Input',
+  InputPx = 'InputPx',
   TextArea = 'TextArea',
   InputSelect = 'InputSelect',
   Switch = 'Switch',
@@ -291,6 +292,11 @@ export interface SchemaType {
   name?: (string | number)[];
   // tooltips
   tooltip?: string;
+  // link
+  link?: {
+    url: string;
+    label: string;
+  };
   // Switch节点值
   valuePropName?: string;
   // 表单验证规则

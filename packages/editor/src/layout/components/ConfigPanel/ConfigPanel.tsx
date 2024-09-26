@@ -2,7 +2,7 @@ import SetterRender from '@/components/SetterRender/SetterRender';
 import { StyleConfig } from '@/components/StyleConfig/StyleConfig';
 import * as Components from '@/packages/index';
 import type { TabsProps } from 'antd';
-import { Form, Tabs } from 'antd';
+import { ConfigProvider, Form, Tabs } from 'antd';
 import ApiConfig from '@/components/ApiConfig/ApiConfig';
 import { memo, useEffect, useState } from 'react';
 import EventConfig from '@/components/EventConfig/EventConfig';
@@ -94,7 +94,6 @@ const ConfigPanel = memo(() => {
 
   // 复制组件ID
   const handleCopy = () => {
-    navigator.clipboard.writeText(selectedElement?.id || pageName);
     copy(selectedElement?.id || pageName);
     message.info('复制成功');
     setCopy(true);
@@ -143,7 +142,17 @@ const ConfigPanel = memo(() => {
     },
   ];
 
-  return <Tabs className={styles.attrBox} centered defaultActiveKey="props" items={items} />;
+  return (
+    <ConfigProvider
+      theme={{
+        token: {
+          fontSize: 12,
+        },
+      }}
+    >
+      <Tabs className={styles.attrBox} centered defaultActiveKey="props" items={items} />
+    </ConfigProvider>
+  );
 });
 
 export default ConfigPanel;
